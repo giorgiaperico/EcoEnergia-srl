@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>EcoEnergia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+  /* Reset */ 
+  body, html{ font-family: 'Intro', Arial, Helvetica, sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{padding-left: 20px;line-height: 1.5;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
+
+  </style>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+ 
+
+<header class="header">
+  <div class="header__content">
+    <a class="header__logo" href="index.html">
+  <img src="logo.png" alt="Logo" height="40" />
+</a>
+    <ul class="header__menu">
+      <li><a class="space-grotesk" href="#chi-siamo">Chi siamo</a></li>
+      <li><a class="space-grotesk" href="#servizi">Servizi</a></li>
+      <li><a class="space-grotesk" href="#progetti">Progetti realizzati</a></li>
+      <li><a class="space-grotesk" href="#Contatti">Contatti</a></li>
+    </ul>
+    <div class="header__quick">
+      <div class="icon-hamburger">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!--cover-->
+<div class="cover" id="cover">
+  <div class="cover__content">
+    <h1 class="space-grotesk">Energia dal sole, risparmio per te</h1>
+    <h3 class="space-grotesk">Esperti nell’energia solare per un futuro sostenibile e conveniente.</h3>
+    <a href="#Contatti" class="button">Scegli EcoEnergia</a>
+  </div>
+</div>
+
+<script>
+  // Elenco delle immagini tue
+  const immagini = [
+    'cover1.jpg',
+    'cover2.jpg',
+    'cover3.jpg',
+    'cover4.jpg',
+    'cover5.jpg'
+  ];
+
+  // Scelta casuale
+  const scelta = immagini[Math.floor(Math.random() * immagini.length)];
+
+  // Applica sfondo con gradient
+  document.getElementById('cover').style.backgroundImage =
+    `linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('${scelta}')`;
+</script>
+
+
+
+<!--Chi siamo-->
+<section id="chi-siamo">
+  <div class="spacer"></div>
+  <div class="grid">
+    <div class="col-50">
+ <h1 class="centered">Chi siamo:</h1>
+<h3 class="space-grotesk">EcoEnergia</h3>
+
+<p>EcoEnergia srl è un'azienda giovane, dinamica e affine al progresso. 
+Il nostro obiettivo è favorire un futuro energetico più sostenibile. 
+Ci siamo specializzati nel campo dell'energia rinnovabile e forniamo ai nostri clienti progetti individuali innovativi, sostenibili e convenienti.
+
+La nostra azienda nasce nel 2021 con l'idea di rendere l'energia pulita facile da ottenere, accessibile e efficiente per tutti.
+Lavorando con esperti dei settori dell'enrgia ambientale, delle energie rinnovabili e della consulenza aziendale, abbiamo costruito un'impresa in grado di fornire delle soluzioni alla crisi climatica.
+Ci siamo fatti strada nel mercato e, da allora, siamo diventati un punto di riferimento per coloro che desiderano investire in un'energia più pulita, efficiente e responsabile.
+<div class="spacer1"></div>
+<a href="#Contatti" class="button mb-2">CONTATTACI</a></div>
+<div class="col-50">
+  <img src="logo.png" alt="Team EcoEnergia" width="80%" class="centered">
+</div>
+</div></section>
+
+<!--Servizi-->
+<section id="servizi">
+<div class="spacer"></div>
+
+<h1 class="centered">I nostri servizi</h1>
+
+<div class="spacer1"></div>
+
+<div class="servizi-container">
+    <div class="servizio">
+      <h2>Consulenza Energetica</h2>
+      <p>Analisi gratuita dei consumi e valutazione della fattibilità di un impianto fotovoltaico personalizzato.</p>
+    </div>
+
+    <div class="servizio">
+      <h2>Installazione Pannelli</h2>
+      <p>Installiamo pannelli solari con tecnici certificati, garantendo efficienza e sicurezza.</p>
+    </div>
+
+    <div class="servizio">
+      <h2>Manutenzione e Assistenza</h2>
+      <p>Offriamo piani di manutenzione periodica e assistenza tecnica per massimizzare la durata del tuo impianto.</p>
+    </div>
+
+     <div class="servizio">
+      <h2>Incentivi e Detrazioni</h2>
+      <p>Ti aiutiamo a ottenere gli incentivi statali e le detrazioni fiscali per il tuo investimento sostenibile.</p>
+    </div>
+  </div>
+</section>
+
+  
+  <!--Progetti - slider-->
+  <section id="progetti">
+  <div class="spacer"></div>
+  <h1 class="centered">I nostri progetti</h1>
+
+    <div class="slider-container">
+      <div class="slides">
+        <div class="slide">
+          <h2>Progetto 1</h2>
+          <p>Installazione fotovoltaico residenziale da 6 kW a Milano.</p>
+          <img src="slider1.jpg" alt="casa_milano" width="60%" style="display: block; margin: 20px auto;">
+        </div>
+        <div class="slide">
+          <h2>Progetto 2</h2>
+          <p>Impianto industriale da 100 kW con accumulo a Torino.</p>
+           <img src="slider2.jpg" alt="industria_torino" width="60%" style="display: block; margin: 20px auto;">
+        </div>
+        <div class="slide">
+          <h2>Progetto 3</h2>
+          <p>Sistema off-grid per casa vacanze a Palermo.</p>
+          <img src="slider3.jpg" alt="vacanze_palermo" width="60%" style="display: block; margin: 20px auto;">
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      if (index >= totalSlides) currentIndex = 0;
+      else if (index < 0) currentIndex = totalSlides - 1;
+      else currentIndex = index;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    // Scorrimento automatico (facoltativo)
+    setInterval(nextSlide, 5000);
+  </script>
+  </section>
+  
+
+<!--Contatti-->
+<section id="Contatti">
+<div class="center-container">
+  <div class="grid">
+    <div class="col-50">
+   
+      <a href="#Contatti" class="button">CONTATTACI</a></div>
+
+    <div class="col-50">
+ <h4 class="allincenter">Saremo pronti a soddisfare la tua richiesta!</h4>
+</div>
+</div>
+
+    
+  </div>
+
+</section>
+
+
+<script>
+  let item = document.querySelector('.icon-hamburger');
+  item.addEventListener("click", function() {
+        document.body.classList.toggle('menu-open');
+  });
+</script>  
+
+<!--Footer-->
+<footer class="footer">
+  <p>© 2025 EcoEnergia - Via del Sole 123, 00100 Roma</p>
+</footer>
+
+</body>
+</html>
