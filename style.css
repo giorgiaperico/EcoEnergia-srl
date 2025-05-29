@@ -60,8 +60,31 @@ body, html{ font-family: 'Inter', Arial, Helvetica, sans-serif; font-size: 16px;
   .menu-open .icon-hamburger span:nth-child(2){transform: rotate(-45deg) translateY(-9px);}
 
   .header__quick{display: flex; justify-content: flex-end; width: 50%;}
+ 
+    h1 {
+    text-align: center;
+  }
+  .button1 {
+    display: block;
+    margin-left: 65px;
+    width: fit-content;
+  }
+
+  .immagine {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  height: auto;
+}
 
 }
+
+
+
+
+
+
+
 
 /*centrare i titoli*/
 .centered {
@@ -164,8 +187,6 @@ text-align: center;
     .nav-buttons button:hover {
       background-color:#6B9080;
     }
-
-
 
 /*footer*/
   .footer {
