@@ -1,73 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!--VIEWPORT: dice al browser che le informazioni scritte sul documento riguardano l'area  visibile
+      WIDTH=DEVICE-WIDTH: indica che la larghezza della viewport è quella dello schermo del dispositivo
+      INITIAL-SCALE=1.0: indica che non c'è zoom-->
+
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--istruzione rivolta specificamente a Internet Explorer (IE) e serve a controllare come il browser deve interpretare e renderizzare la pagina web
+      Usa la modalità più aggiornata possibile per mostrare questa pagina-->
+
   <title>EcoEnergia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!--PRECONNECT: indica che il browser dovrebbe stabilire una connessione anticipata (pre-connect) con l’host specificato
+      href="https://fonts.googleapis.com": è l’host (server) a cui ci si connette in anticipo — in questo caso, il server di Google Fonts
+      si usa per caricare più velocemente le risorse esterne-->
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <style>
-  /* Reset */ 
-  body, html{ font-family: 'Intro', Arial, Helvetica, sans-serif; line-height: 1; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{padding-left: 20px;line-height: 1.5;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
-
-  </style>
-
-<link rel="stylesheet" href="style.css">
+  <!--serve a caricare un font da Google Fonts, in questo caso Space Grotesk-->
+  <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-
- 
-
-<header class="header">
-  <div class="header__content">
-    <a class="header__logo" href="index.html">
-  <img src="logo.png" alt="Logo" height="40" />
-</a>
-    <ul class="header__menu">
-      <li><a class="space-grotesk" href="#chi-siamo">Chi siamo</a></li>
-      <li><a class="space-grotesk" href="#servizi">Servizi</a></li>
-      <li><a class="space-grotesk" href="#progetti">Progetti realizzati</a></li>
-      <li><a class="space-grotesk" href="#Contatti">Contatti</a></li>
-    </ul>
-    <div class="header__quick">
-      <div class="icon-hamburger">
-        <span></span>
-        <span></span>
-      </div>
+    <!-- HEADER -->
+  <header class="header">
+    <div class="header__content">
+      <a class="header__logo" href="index.html">
+        <img class="header__logo" src="images/logo.png" alt="Logo" height="40" />
+      </a>
+        <ul class="header__menu">
+            <li><a id="link-1" href="#chi-siamo">Chi siamo</a></li>
+            <li><a id="link-2" href="#servizi">Servizi</a></li>
+            <li><a id="link-3" href="#progetti">Progetti realizzati</a></li>
+            <li><a id="link-4" href="#Contatti">Contatti</a></li>
+        </ul>
+        <div class="header__quick">
+            <div class="icon-hamburger">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
-  </div>
 </header>
-
-
 
 <!--cover-->
 <div class="cover" id="cover">
   <div class="cover__content">
-    <h1 class="space-grotesk">Energia dal sole, risparmio per te</h1>
-    <h3 class="space-grotesk">Esperti nell’energia solare per un futuro sostenibile e conveniente.</h3>
+    <h1 class=>Energia dal sole, risparmio per te</h1>
+    <h3 class=>Esperti nell’energia solare per un futuro sostenibile e conveniente.</h3>
     <a href="#Contatti" class="button">Scegli EcoEnergia</a>
   </div>
 </div>
 
 <script>
-  // Elenco delle immagini tue
+  // Elenco delle immagini 
   const immagini = [
-    'cover1.jpg',
-    'cover2.jpg',
-    'cover3.jpg',
-    'cover4.jpg',
-    'cover5.jpg'
+    'images/cover1.jpg',
+    'images/cover2.jpg',
+    'images/cover3.jpg',
+    'images/cover4.jpg',
+    'images/cover5.jpg'
   ];
 
   // Scelta casuale
   const scelta = immagini[Math.floor(Math.random() * immagini.length)];
 
+  /* Math.random() → genera un numero casuale tra 0 (incluso) e 1 (escluso).
+
+    Math.random() * immagini.length → scala quel numero per diventare un valore compreso tra 0 e la lunghezza dell'array (esclusa).
+
+    Math.floor(...) → tronca il numero decimale per ottenere un intero valido come indice dell’array.
+
+    immagini[...] → accede all’elemento dell’array all’indice casuale appena calcolato.
+
+    const scelta = ... → assegna quell’elemento alla variabile scelta.*/
+
   // Applica sfondo con gradient
   document.getElementById('cover').style.backgroundImage =
-    `linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('${scelta}')`;
+    `linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('${scelta}')`; //sceglie l'url dell'immagine dall'elemento dell'array immagine
 </script>
 
 
@@ -90,7 +104,7 @@ Ci siamo fatti strada nel mercato e, da allora, siamo diventati un punto di rife
 <div class="spacer1"></div>
 <a href="#Contatti" class="button button1 mb-2">CONTATTACI</a></div>
 <div class="col-50">
-  <img src="logo.png" alt="Team EcoEnergia" width="80%" class="immagine centered">
+  <img src="images/logo.png" alt="Team EcoEnergia" width="80%" class="immagine centered">
 </div>
 </div></section>
 
@@ -125,28 +139,27 @@ Ci siamo fatti strada nel mercato e, da allora, siamo diventati un punto di rife
   </div>
 </section>
 
-  
   <!--Progetti - slider-->
   <section id="progetti">
   <div class="spacer"></div>
-  <h1 class="centered">I nostri progetti</h1>
+  <h1>I nostri progetti</h1>
 
     <div class="slider-container">
       <div class="slides">
         <div class="slide">
           <h2>Progetto 1</h2>
           <p>Installazione fotovoltaico residenziale da 6 kW a Milano.</p>
-          <img src="slider1.jpg" alt="casa_milano" width="60%" style="display: block; margin: 20px auto;">
+          <img src="images/slider1.jpg" alt="casa_milano" width="60%" style="display: block; margin: 20px auto;">
         </div>
         <div class="slide">
           <h2>Progetto 2</h2>
           <p>Impianto industriale da 100 kW con accumulo a Torino.</p>
-           <img src="slider2.jpg" alt="industria_torino" width="60%" style="display: block; margin: 20px auto;">
+           <img src="images/slider2.jpg" alt="industria_torino" width="60%" style="display: block; margin: 20px auto;">
         </div>
         <div class="slide">
           <h2>Progetto 3</h2>
           <p>Sistema off-grid per casa vacanze a Palermo.</p>
-          <img src="slider3.jpg" alt="vacanze_palermo" width="60%" style="display: block; margin: 20px auto;">
+          <img src="images/slider3.jpg" alt="vacanze_palermo" width="60%" style="display: block; margin: 20px auto;">
         </div>
       </div>
       <div class="nav-buttons">
@@ -157,14 +170,14 @@ Ci siamo fatti strada nel mercato e, da allora, siamo diventati un punto di rife
 
   <script>
     const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slide').length;
+    const totalSlides = document.querySelectorAll('.slide').length; //.length restituisce il numero di elementi trovati 
     let currentIndex = 0;
 
     function showSlide(index) {
-      if (index >= totalSlides) currentIndex = 0;
-      else if (index < 0) currentIndex = totalSlides - 1;
-      else currentIndex = index;
-      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      if (index >= totalSlides) currentIndex = 0;   // se l'indice supera il numero totale, ricomincia da capo
+      else if (index < 0) currentIndex = totalSlides - 1; // se è minore di 0, torna all'ultima slide
+      else currentIndex = index;  // altrimenti usa l'indice passato
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`; // trasla della percentuale indicata dall'index
     }
 
     function nextSlide() {
@@ -179,9 +192,8 @@ Ci siamo fatti strada nel mercato e, da allora, siamo diventati un punto di rife
     setInterval(nextSlide, 5000);
   </script>
   </section>
-  
 
-<!--Contatti-->
+  <!--Contatti-->
 <section id="Contatti">
 <div class="center-container">
   <div class="grid">
@@ -198,19 +210,27 @@ Ci siamo fatti strada nel mercato e, da allora, siamo diventati un punto di rife
   </div>
 
 </section>
-
-
-<script>
-  let item = document.querySelector('.icon-hamburger');
-  item.addEventListener("click", function() {
-        document.body.classList.toggle('menu-open');
-  });
-</script>  
-
 <!--Footer-->
 <footer class="footer">
   <p>© 2025 EcoEnergia - Via del Sole 123, 00100 Roma</p>
 </footer>
 
+
+<script>
+  const hamburger = document.querySelector('.icon-hamburger');
+  const menuLinks = document.querySelectorAll('.header__menu a');
+
+  hamburger.addEventListener('click', function () {
+    document.body.classList.toggle('menu-open');
+  });
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('menu-open');
+    });
+  });
+
+  /*toggle è un interruttore*/
+</script>
 </body>
-</html>
+

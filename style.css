@@ -1,6 +1,12 @@
-/* ! Reset */
+/* Reset */
 body, html{ font-family: 'Inter', Arial, Helvetica, sans-serif; font-size: 16px; box-sizing: border-box;margin: 0;padding: 0;}*,*:before,*:after{ box-sizing: border-box; }h1,h2,h3,h4,h5,h6, p, ol, ul{margin: 0 0 1rem 0;padding: 0;}ol,ul{list-style-type: none;}img{height: auto;}h1{font-size: 4rem;} h2{font-size: 3rem;} h3{font-size: 2rem;} h4{font-size: 1rem;} h5{font-size: 0.8rem;} h6{font-size: 0.6rem;}a{text-decoration:none}
 
+body{
+  background-color: #e1f6e2;
+  min-height: 100vh;
+}
+
+/*SPAZI VUOTI*/
 .spacer{
     height: 150px;
 }
@@ -13,78 +19,26 @@ body, html{ font-family: 'Inter', Arial, Helvetica, sans-serif; font-size: 16px;
 /*<weight>: Use a value from 300 to 700*/
 /* <uniquifier>: Use a unique and descriptive class name*/
 
-.space-grotesk{
-  font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:400;
-  font-style: normal;
-}
-
 /*comportamento scroll*/
  html {
       scroll-behavior: smooth;
     } 
 
-/* Menu */
+/*SETTINGS COLORI*/
 :root { 
     --menu-bg: #6b9080; 
-    --menu-color: #fff; }
+    --menu-color: #fff; 
+    --colore-intermedio: #A4C3B2;
+    --azzurro-chiaro: #CCE3DE;
+    --grigio: #2b2e28;
+    --bianco: #fff;}
 
-    /*settato le variabili per cambiare i colori*/
-
-.header{ background-color: var(--menu-bg); position: fixed; top:0;  left:0; z-index: 9999; width: 100%; padding: 15px 22.5px; }
-.header__content{max-width: 1200px;width: 100%;margin: 0 auto; display: flex;justify-content: space-between; align-items: center;}
-.header__logo img {
-  height: 80px;
-  width: auto;
-}
-.header__quick{display: flex; align-items: center;color:var(--menu-color)}
-
-.header__menu{padding: 0;margin: 0;}
-.header__menu li{display: inline-block;}
-.header__menu li a{color:var(--menu-color); opacity: 0.8;display: block;padding: 16px;font-size: 20px;}
-
-@media (max-width: 768px) {
-  .header__menu{   
-    position: absolute; top:60px; left:0; background-color: var(--menu-bg); width: 100%; height: 100vh;
-    height: 0vh; overflow: hidden;transition: all 1s cubic-bezier(.215, .61, .355, 1);
-  }
-
-  .header__menu li{width: 100%;border-bottom: 1px solid #444}
-  .menu-open .header__menu{height: 100vh;padding: 3%;}
-
-  .icon-hamburger{height: 50px;width: 40px;margin-left: 20px;padding-top: 5px;}
-  .icon-hamburger span{height: 2px; width: 30px;background: var(--menu-color);position: relative;display: block;margin-top: 11px;transition: all 0.2s cubic-bezier(.215, .61, .355, 1);}
-
-  .menu-open .icon-hamburger span:nth-child(1){transform: rotate(45deg) translateY(9px);}
-  .menu-open .icon-hamburger span:nth-child(2){transform: rotate(-45deg) translateY(-9px);}
-
-  .header__quick{display: flex; justify-content: flex-end; width: 50%;}
- 
-    h1 {
-    text-align: center;
-  }
-  .button1 {
-    display: block;
-    margin-left: 65px;
-    width: fit-content;
-  }
-
-  .immagine {
-  display: block;
-  margin: 20px auto;
-  max-width: 90%;
-  height: auto;
-}
-
-}
-
-
-
-
-
-
-
+/* ! Title System */
+h1, .text-1 {font-size: 3.5rem;margin-bottom:0.5rem;font-family:"Space Grotesk", sans-serif; font-weight: 400; color: var(--grigio); text-align: center;}
+h2, .text-2 {font-size: 2.4rem;margin-bottom:1rem;font-family:"Space Grotesk", sans-serif; font-weight: 500; color: var(--grigio);}
+h3, .text-3  {font-size: 1.5rem;margin-bottom:1rem;font-family:"Space Grotesk", sans-serif; font-weight: 300; color: var(--grigio);}
+h4, p, .text-4 {font-size: 1rem;margin-bottom:1rem; line-height: 1.5; color: var(--grigio);}
+a{font-family:"Space Grotesk", sans-serif; font-weight: 300; color: var(--bianco)}
 
 /*centrare i titoli*/
 .centered {
@@ -96,6 +50,190 @@ body, html{ font-family: 'Inter', Arial, Helvetica, sans-serif; font-size: 16px;
 text-align: center;
 }
 
+.center-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30vh; /* tutta l’altezza della finestra */
+      background: var(--colore-intermedio);
+    }
+
+
+/* ! Cover */
+.cover{ 
+  text-align: center; padding:10px; margin:0px; min-height:600px; width:100%; 
+  display:flex; flex-direction:column; justify-content:center; 
+  background-position: center center; background-size:cover;
+}
+.cover * {color: var(--bianco)} /*tutti gli elementi della cover sono bianchi*/
+
+.immagine {
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
+  height: auto;
+}
+
+/* MENU */
+.header{ 
+    background-color: var(--menu-bg); 
+    position: fixed; 
+    top:0;  left:0; 
+    z-index: 9999; 
+    width: 100%; 
+    padding: 15px 22.5px; }
+
+.header__content{
+width: 100%;
+margin: 0 auto; 
+display: flex;
+justify-content: space-between; 
+align-items: center;}
+
+.header__logo {
+  height: 80px;
+  width: auto;
+}
+/*div dei link*/
+.header__menu{
+  padding: 0;
+  margin: 0;
+}
+
+.header__menu li{
+  display: inline-block;
+  }
+
+.header__menu li a{
+  color:var(--menu-color); 
+  opacity: 0.8;
+  display: block;
+  padding: 16px;
+  font-size: 20px;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;}
+
+  /* Animazione hamburger */
+.icon-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  z-index: 10000;
+  position: relative;
+}
+
+.icon-hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s ease;
+  transform-origin: center;
+}
+
+/* Trasformazione in X */
+body.menu-open .icon-hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+body.menu-open .icon-hamburger span:nth-child(2) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+  /* MENU MOBILE */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 45px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
+  .slider-container {
+      position: relative;
+      max-width: 900px;
+      margin: 50px auto;
+      overflow: hidden; /*     il contenuto che eccede non è visibile       */
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      background: var(--bianco);
+      max-height: 300px;
+    }
+
+    .slides{
+      height: 300px;
+      align-items: center;
+
+    }
+
+  /* Nasconde il menu di default sui dispositivi piccoli */
+    .header__menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--menu-bg);
+    padding: 20px 0;
+    transform: translateY(-100vh);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+/* Mostra il menu se il body ha la classe .menu-open */
+  body.menu-open .header__menu {
+    display: flex;
+    transform: translateY(0);
+  }
+  
+  .header__menu li {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .header__menu li a {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+  /* Mostra l'hamburger solo su mobile */
+  .icon-hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .icon-hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: all 0.3s ease;
+  }
+}
+
+/* Nasconde l'hamburger su desktop */
+@media (min-width: 769px) {
+  .icon-hamburger {
+    display: none;
+  }
+
+  .header__menu {
+    display: flex !important;
+    gap: 10px;
+  }
+}
 
 /*Servizi*/
 .servizi-container {
@@ -109,7 +247,7 @@ text-align: center;
     }
 
     .servizio {
-      background-color: white;
+      background-color: var(--bianco);
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       width: 300px;
@@ -124,7 +262,7 @@ text-align: center;
 
     .servizio h2 {
       margin-top: 0;
-      color: #6b9080;
+      color: var(--menu-bg);
     }
 
     .servizio p {
@@ -137,10 +275,10 @@ text-align: center;
       position: relative;
       max-width: 900px;
       margin: 50px auto;
-      overflow: hidden;
+      overflow: hidden; /*     il contenuto che eccede non è visibile       */
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      background: white;
+      background: var(--bianco);
     }
 
     .slides {
@@ -150,19 +288,19 @@ text-align: center;
 
     .slide {
       min-width: 100%;
-      box-sizing: border-box;
+      box-sizing: border-box; /* padding e border inclusi nella misura dell'elemento  */
       padding: 100px;
       text-align: center;
     }
 
     .slide h2 {
       margin-bottom: 10px;
-      color: #6B9080;
+      color: var(--menu-bg);
     }
 
     .slide p {
       font-size: 1em;
-      color: #555;
+      color: var(--grigio);
     }
 
     .nav-buttons {
@@ -175,9 +313,9 @@ text-align: center;
     }
 
     .nav-buttons button {
-      background-color: #CCE3DE;
+      background-color: var(--azzurro-chiaro);
       border: none;
-      color: white;
+      color: var(--bianco);
       font-size: 2em;
       padding: 10px 20px;
       cursor: pointer;
@@ -185,14 +323,14 @@ text-align: center;
     }
 
     .nav-buttons button:hover {
-      background-color:#6B9080;
+      background-color: var(--menu-bg);
     }
 
-/*footer*/
+    /*footer*/
   .footer {
     height: 60px;
-    background-color: #6B9080;
-    color: #2E282A;
+    background-color: var(--menu-bg);
+    color: var(--grigio);
     font-size: 0.8rem;
     display: flex;
     align-items: center;
@@ -204,38 +342,6 @@ text-align: center;
     margin: 0;
   }
 
-/* ! Title System */
-h1, .text-1 {font-size: 3.5rem;margin-bottom:0.5rem;font-family:"Space Grotesk", sans-serif; font-weight: 400; color: #2E282A;}
-h2, .text-2 {font-size: 2.4rem;margin-bottom:1rem;font-family:"Space Grotesk", sans-serif; font-weight: 500; color: #2E282A;}
-h3, .text-3  {font-size: 1.5rem;margin-bottom:1rem;font-family:"Space Grotesk", sans-serif; font-weight: 300; color: #2E282A;}
-h4, p, .text-4 {font-size: 1rem;margin-bottom:1rem; line-height: 1.5; color: #2E282A;}
-a{font-family:"Space Grotesk", sans-serif; font-weight: 300; color: #fff}
-
-/*Button System*/
-.button { 
-  font-size: 1.8rem; background: #2E282A; color:#fff;
-  text-decoration: none;padding: 14px 25px; display: inline-block;
-  border-radius: 4px; font-weight: 700;
-}
-.button:hover{ background:#6B9080; }
-
- .center-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 30vh; /* tutta l’altezza della finestra */
-      background: #A4C3B2;
-    }
-
-
-/* ! Cover */
-.cover{ 
-  text-align: center; padding:10px; margin:0px; min-height:600px; width:100%; 
-  display:flex; flex-direction:column; justify-content:center; 
-  background-position: center center; background-size:cover;
-}
-.cover * {color:#fff} /*tutti gli elementi della cover sono bianchi*/
-
 /* ! Grid System */
 .grid { margin: 0 auto; padding: 0 10px; max-width: 1250px; display: flex; flex-flow: row; flex-wrap: wrap;}
 .grid--center{justify-content: center;}
@@ -243,6 +349,8 @@ a{font-family:"Space Grotesk", sans-serif; font-weight: 300; color: #fff}
 
 [class*='col-'] { position: relative;padding: 0 10px;}
 .grid .grid [class*='col-'] {padding: 0px;}
+
+/*[class*='col-'] è un selettore CSS che prende tutti gli elementi HTML la cui classe contiene la stringa "col-" (es: class="col-6" o class="my-col-3").*/
 
 .col-20{ width: 20%; }
 .col-25{ width: 25%; }
@@ -305,3 +413,17 @@ a{font-family:"Space Grotesk", sans-serif; font-weight: 300; color: #fff}
 .text-right { text-align: right; }
 .text-left { text-align: left; }
 .img-res { width: 100%; height: auto; margin-bottom: 20px;vertical-align: middle;}
+
+/*Button System*/
+.button { 
+  font-size: 1.8rem; background: var(--grigio); color: var(--bianco);
+  text-decoration: none;padding: 14px 25px; display: inline-block;
+  border-radius: 4px; font-weight: 700;
+}
+.button:hover{ background:var(--menu-bg); }
+
+.button1 {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: fit-content;
+  }
